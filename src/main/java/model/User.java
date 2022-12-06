@@ -12,5 +12,5 @@ import java.io.Serializable;
 @NoArgsConstructor
 public class User implements Serializable {
     private int ID;
-    private String name,nvCode,phone,email,address,username,password;
+    private String name,username,password,fullname,age, email;
 }

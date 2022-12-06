@@ -1,9 +1,7 @@
-package com.example.mathang;
+package com.example.servlet;
 
 import dao.UserDAO;
-import model.MatHang;
 import model.User;
-import dao.MatHangDAO;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -39,10 +37,6 @@ public class CheckLoginServlet extends HttpServlet {
         } else {
             HttpSession sesion = request.getSession();
             sesion.setAttribute("account", user);
-            MatHangDAO mh = new MatHangDAO();
-            List<MatHang> list = mh.getall();
-            System.out.println(list.size());
-            request.setAttribute("data", list);
             RequestDispatcher dispatcher = request.getRequestDispatcher("trangchu.jsp");
             dispatcher.forward(request, response);
         }

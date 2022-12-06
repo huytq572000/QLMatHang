@@ -9,8 +9,8 @@ public class UserDAOTest {
     @Test
     void checkLogin(){
         UserDAO userDAO = new UserDAO();
-        String username = "Huy";
-        String password = "1";
+        String username = "admin";
+        String password = "admin";
         User user = userDAO.checkLogin(username,password);
         assertNotNull(user);
         assertEquals(user, user);
